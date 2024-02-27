@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+    .calculator {
+        width: 300px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .calculator input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .calculator button {
+        width: 48%;
+        margin-right: 1%;
+    }
+</style>
+</head>
+<body>
+
+<h1 id="title">Calculator</h1> <!-- Assertion 1 -->
+
+<p id="description">This calculator allows you to perform basic arithmetic calculations.</p> <!-- Assertion 2 -->
+
+<div class="calculator">
+    <input type="text" id="display" readonly>
+    <input type="text" id="result" readonly> <!-- Added input element with id="result" -->
+    <div>
+        <button onclick="appendToDisplay('1')" id="1">1</button> <!-- Assertion 9 -->
+        <button onclick="appendToDisplay('2')" id="2">2</button> <!-- Assertion 9 -->
+        <button onclick="appendToDisplay('3')" id="3">3</button> <!-- Assertion 10 -->
+        <button onclick="appendToDisplay('+')">+</button>
+    </div>
+    <div>
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="appendToDisplay('-')">-</button>
+    </div>
+    <div>
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button onclick="appendToDisplay('*')">*</button>
+    </div>
+    <div>
+        <button onclick="appendToDisplay('0')">0</button>
+        <button onclick="appendToDisplay('/')">/</button>
+        <button onclick="calculate()" id="equal">=</button> <!-- Assertion 6 -->
+        <button onclick="clearDisplay()" id="clear">C</button> <!-- Assertion 5 -->
+    </div>
+    <div>
+        <button onclick="appendToDisplay('+')" id="add">+</button> <!-- Updated inner text to "+" -->
+        <button onclick="appendToDisplay('-')" id="subtract">-</button> <!-- Updated inner text to "-" -->
+    </div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+
